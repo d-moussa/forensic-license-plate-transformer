@@ -78,49 +78,6 @@ class Normalize:
         return x
 
 
-# class JpegCompression:
-#     """Jpeg compression augmentation
-#
-#     Args:
-#         x: Image to jpeg compress
-#
-#     Returns:
-#         Augmented image
-#     """
-#
-#     def __init__(self, aug_params, inf_injection=None):
-#         self.probability = aug_params.Jpeg.probability
-#         self.QF_min = aug_params.Jpeg.QF_min
-#         self.QF_max = aug_params.Jpeg.QF_max
-#         self.inf_injection = inf_injection
-#         if self.inf_injection is not None:
-#             print("INFO -- Initializing JPEG Augmentation with inf_injection class {}".format(self.inf_injection))
-#
-#     def __call__(self, x):
-#         qf = None
-#         if np.random.uniform(0, 1) < self.probability:
-#             qf = np.random.randint(self.QF_min, self.QF_max + 1)
-#
-#             # torch wants img in CHW order
-#             x = np.expand_dims(x, axis=0)
-#             x_enc = encode_jpeg(tensor(x * 255.0, dtype=torch_uint8), qf)
-#             try:
-#                 x_dec = decode_jpeg(x_enc)  # returns uint8 in CHW order
-#             except NameError:
-#                 x_dec = decode_image(x_enc)
-#
-#             x = np.squeeze(x_dec)
-#             x = x.numpy() / 255.0
-#             x = np.clip(x, 0, 1)
-#
-#         # try binning
-#         #qf_emb = (qf-1) // 10  # 10 classes
-#         qf_emb = qf -1
-#
-#         qf_emb = self.inf_injection if self.inf_injection is not None else qf_emb
-#
-#         return qf_emb, x  # for better handling scale jpeg quality between [0, max_classes-1]
-
 
 class JpegCompression:
 
@@ -170,5 +127,5 @@ class JpegCompression:
                     qf_emb = (qf - 1) // self.linear_map_factor  # qf \in [0, num_degradation_classes-1]
                 else:
                     qf_emb = (qf - 1)  # no scaling
-        return qf_emb, x  # for better handling scale jpeg quality between [0, max_classes-1]
+        return qf_emb, x 
 
