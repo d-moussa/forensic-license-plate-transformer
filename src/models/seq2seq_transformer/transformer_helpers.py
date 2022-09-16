@@ -20,8 +20,6 @@ def translate_to_codes(caption, parameters):
     return cap_code
 
 
-# generate masks to prevent attending to all time steps
-# should be zero mask for src, but square mask for target in our case
 def generate_square_subsequent_mask(sz, device):
     mask = (torch.triu(torch.ones((sz, sz), device=device)) == 1).transpose(0, 1)
     mask = mask.float().masked_fill(mask == 0, float('-inf')).masked_fill(mask == 1, float(0.0))
