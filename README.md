@@ -22,7 +22,7 @@ Example:
 $ PYTHONPATH='pwd' python train.py json_configs/train_config.json
 ```
 The provided config file belongs to our `LP-Transf.-100` model in the [paper](https://faui1-files.cs.fau.de/public/publications/mmsec/2022-Moussa-FLPR.pdf).
-To change the model configuration, adapt the config file. Some relevant parameters:
+Some general config params:
 
 <pre>
 <b>device:</b> Hardware device to train on, e.g. "cuda:0" <i>(string)</i>
