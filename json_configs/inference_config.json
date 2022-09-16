@@ -1,0 +1,33 @@
+{
+  "alphabet_file": "alphabets/german_lp_mapping_seq2seq.json",
+  "device": "cuda:0",
+  "max_pred_length": 9,
+  "items_per_set": 100000,
+  "log_interval": 1000,
+  "print_batch": false,
+  "model_weights": "saved_models/model/saving/model_weights.pth",
+  "output_dir": "saved_models/model/predictions/",
+  "sample_shape": [
+    40,
+    180
+  ],
+  "test_data_dir": "data/test/",
+  "test_batch_size": 64,
+
+
+      "aug_params" : {
+        "augment" : true,
+        "Jpeg": {
+            "probability": 1,
+            "QF_min": 1,
+            "QF_max": 100
+        },
+        "Resolution" : {
+            "probability": 1,
+            "min_res" : 20,
+            "max_res" : 180,
+            "keep_aspect_ratio": true,
+            "interpolation": ["INTER_LINEAR"]
+        }
+    }
+}
