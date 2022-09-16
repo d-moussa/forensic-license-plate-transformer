@@ -6,9 +6,7 @@ If you use this code for your research, please cite our paper accepted at ICIP 2
 ## Pretrained Models
 [Here](https://faui1-files.cs.fau.de/public/mmsec/moussa/2022-ICIP-trained-models/) you can download our pretrained pytorch models for our experiments specified in the [paper](https://faui1-files.cs.fau.de/public/publications/mmsec/2022-Moussa-FLPR.pdf).
 
-## Getting started
-
-### Prerequisites
+## Prerequisites
 1. Download the synthetic license plate dataset from [here](https://faui1-files.cs.fau.de/public/mmsec/datasets/SynthGLP/) into the `data` folder. If you store it in some other location you need to adapt the paths in the given JSON configuration files used for training/inferencing.
 2. Install [conda](https://docs.conda.io/en/latest/miniconda.html) and create the `icip2022` environment with *environment.yml*
 ```bash
@@ -16,7 +14,7 @@ $ conda env create -f environment.yml
 $ conda activate icip2022
 ```
 
-### Model Training
+## Model Training
 Example:
 ```bash
 $ PYTHONPATH='pwd' python train.py json_configs/train_config.json
@@ -45,7 +43,7 @@ The training routine creates the directory specified in the config via `output_m
 3. a copy of the model's config `config.json`
 4. a `saving` folder with model checkpoints, one for every trained epoch
 
-### Evaluate Model
+## Evaluate Model
 1. Inference the model and save the predictions.
 
 Example: 
