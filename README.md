@@ -1,5 +1,5 @@
 # Forensic License Plate Recognition with Compression-Informed Transformers
-If you use this code for your research, please cite our paper accepted and ICIP 2022 and previously available [here](https://faui1-files.cs.fau.de/public/publications/mmsec/2022-Moussa-FLPR.pdf) .
+If you use this code for your research, please cite our paper accepted at ICIP 2022 and previously available [here](https://faui1-files.cs.fau.de/public/publications/mmsec/2022-Moussa-FLPR.pdf) .
 
 ![image](images/architecture.png)
 
