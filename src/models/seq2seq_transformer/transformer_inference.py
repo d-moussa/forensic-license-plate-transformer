@@ -95,7 +95,7 @@ def predict_batch(src, tgt, model, alphabet, device, max_pred_length:int, knowle
                                                   alphabet=alphabet,
                                                   device=device,
                                                   max_pred_length=max_pred_length,
-                                                  knowledge_class=knowledge_class)
+                                                  knowledge_class=knowledge_class[i])
         predictions.append(preds)
         tgt_item = tgt[i]
         targets.append("".join(
