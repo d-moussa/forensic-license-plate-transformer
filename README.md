@@ -1,7 +1,20 @@
 # Forensic License Plate Recognition with Compression-Informed Transformers
-If you use this code for your research, please cite our paper accepted at ICIP 2022 and previously available [here](https://faui1-files.cs.fau.de/public/publications/mmsec/2022-Moussa-FLPR.pdf) .
+
 
 ![image](images/architecture.png)
+
+If you use this code for your research, please cite our [paper](https://faui1-files.cs.fau.de/public/publications/mmsec/2022-Moussa-FLPR.pdf) accepted at ICIP 2022:
+
+```
+@inproceedings{moussa2022forensic,
+  title={{Forensic License Plate Recognition with Compression-Informed Transformers}},
+  author={Moussa, Denise and Maier, Anatol and Spruck, Andreas and Seiler, J{\"u}rgen and Riess, Christian},
+  booktitle={{2022 IEEE International Conference on Image Processing (ICIP)}},
+  pages={406--410},
+  year={2022},
+  organization={IEEE}
+}
+```
 
 ## Pretrained Models
 [Here](https://faui1-files.cs.fau.de/public/mmsec/moussa/2022-ICIP-trained-models/) you can download our pretrained pytorch models for our experiments specified in the [paper](https://faui1-files.cs.fau.de/public/publications/mmsec/2022-Moussa-FLPR.pdf).
